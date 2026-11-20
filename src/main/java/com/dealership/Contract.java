@@ -1,14 +1,12 @@
 package com.dealership;
 
-import java.math.BigDecimal;
-
 public abstract class Contract {
     private String date;
     private String customerName;
     private String customerEmail;
     private Vehicle vehicleSold;
-    private BigDecimal totalPrice;
-    private BigDecimal monthlyPayment;
+    protected double totalPrice;
+    protected double monthlyPayment;
 
     public Contract(String date, String customerName, String customerEmail, Vehicle vehicleSold) {
         this.date = date;
@@ -49,7 +47,7 @@ public abstract class Contract {
         this.vehicleSold = vehicleSold;
     }
 
-    public abstract BigDecimal getTotalPrice();
+    public abstract double getTotalPrice();
 
-    public abstract BigDecimal getMonthlyPayment();
+    public abstract double getMonthlyPayment();
 }
